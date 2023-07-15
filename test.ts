@@ -1,8 +1,14 @@
-const string  = ["aaaaa123"];
-const makeArray = string[0]
-const newArray = [...makeArray]
 
-const firstUniqueElement = newArray.find((el) => newArray.indexOf(el) === newArray.lastIndexOf(el));
-const result = firstUniqueElement !==  undefined ? firstUniqueElement:""
+  const inputs:string[]= ["1124155qqa"];
 
-console.log(result)
+  const firstNonRepeated = (inputs: string[]): string => {
+  const makeArray= inputs[0];
+  const newArray: string[] = [...makeArray];
+  
+  const firstUniqueElement: string | undefined = newArray.find((el) => newArray.indexOf(el) === newArray.lastIndexOf(el));
+  const result: string = firstUniqueElement !== undefined ? firstUniqueElement : "";
+  
+  return result;
+}
+
+console.log(firstNonRepeated(inputs));
